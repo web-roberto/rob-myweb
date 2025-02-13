@@ -1,10 +1,11 @@
 import styled from 'styled-components';
 
 function LandingPage(props) {
+ // console.warn('-----------LandingPage------props-', props);
   return (
     <>
       <LightColor>Hola Mundo</LightColor>
-      <button type="button" onClick={props.aTrue}>
+      <button type="button" onClick={props.toLanding}>
         Projects
       </button>
     </>

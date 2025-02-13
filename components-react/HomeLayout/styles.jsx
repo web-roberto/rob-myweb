@@ -23,10 +23,21 @@ export const Container = styled.main`
     line-height: 1.4;
     text-align: center;
     //color: lightblue;
+    color: lightblue;
+    margin: 0px;
+    padding: 0px;
+    position: relative;
+    bottom: 0rem;
+  }
+  h3 {
+    font-size: 2rem;
+    letter-spacing: 0.11px;
+    line-height: 1.4;
+    text-align: center;
     color: #01be96;
     margin: 0px;
     padding: 0px;
     position: relative;
-    top: 60px;
+    top: 3rem;
   }
 `;

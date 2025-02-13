@@ -1,5 +1,5 @@
 import {
-  connectDatabase,
+  connectdatabase,
   insertDocument,
   getAllDocumentsWhere,
   getAllDocuments,
@@ -15,7 +15,7 @@ async function handler(req, res) {
   let client;
 
   try {
-    client = await connectDatabase();
+    client = await connectdatabase();
   } catch (error) {
     res.status(500).json({ message: 'Connecting to the database failed!' });
     console.error('----Connecting to the database failed!');

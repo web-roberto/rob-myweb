@@ -12,18 +12,18 @@ async function handler(req, res) {
     client = await connectdatabase();
   } catch (error) {
     res.status(500).json({ message: 'Connecting to the database failed!' });
-    console.error('Error connectdatabase api/events ');
+    console.error('Error connectdatabase api/movies ');
     return;
   }
 
   if (req.method === 'GET') {
     try {
-      const documents = await getAllDocuments(client, 'events', { _id: -1 });
-      res.status(200).json({ events: documents });
+      const documents = await getAllDocuments(client, 'movies', { _id: -1 });
+      res.status(200).json({ movies: documents });
       client.close();
     } catch (error) {
-      res.status(500).json({ message: 'Getting events failed.' });
-      console.error('Error getAllDocuments "events" ');
+      res.status(500).json({ message: 'Getting movies failed.' });
+      console.error('Error getAllDocuments "movies" ');
       client.close();
       return;
     }

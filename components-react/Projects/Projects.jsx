@@ -16,7 +16,7 @@ const Projects = (props) => {
           rerum earum.
         </p>
       </Zoom>
-      {/* <div onClick={props.aTrue}> */}
+      {/* <div onClick={props.toLanding}> */}
       <Slide>
         <SliderComp />
       </Slide>

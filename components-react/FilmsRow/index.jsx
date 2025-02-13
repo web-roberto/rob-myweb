@@ -3,12 +3,12 @@ import React from 'react';
 import { Container, Content, Wrapper } from './styles';
 
 export function FilmsRow({ movieResults, category, addMargin }) {
-  console.log(
-    '#################FilmsRow##########movieResults###category#addMargin# ',
-    movieResults,
-    category,
-    addMargin
-  );
+  // console.log(
+  //   '#################FilmsRow##########movieResults###category#addMargin# ',
+  //   movieResults,
+  //   category,
+  //   addMargin
+  // );
   const settings = {
     dots: false,
     infinite: false,
@@ -51,7 +51,7 @@ export function FilmsRow({ movieResults, category, addMargin }) {
                 {/* <Link href={`/movies/${movie.id}`}> */}
                 {/* <Link href={`#`}> */}
                 <img src={movie.cardImg} alt={movie.title} />
-                <span>Hola</span>
+                {/* <span>Hola</span> */}
                 {/* </Link> */}
               </Wrapper>
             </div>

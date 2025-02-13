@@ -45,25 +45,25 @@ if (process.env.URL) {
 } else fullPath = '/api/events/';
 
 export async function getAllEvents() {
-  console.log(
-    '--------@@@@@@@@@@@@@@@@@@@@@@@@--getAllEvents--fullPath:',
-    fullPath
-  );
+  // console.log(
+  //   '--------@@@@@@@@@@@@@@@@@@@@@@@@--getAllEvents--fullPath:',
+  //   fullPath
+  // );
   try {
     const result = await fetch(fullPath);
-    console.log(
-      '---@@@@@@@@@@@@@@@@@@@@@@@@-result del fetch de Eventos',
-      result
-    );
+    // console.log(
+    //   '---@@@@@@@@@@@@@@@@@@@@@@@@-result del fetch de Eventos',
+    //   result
+    // );
     if (!result.ok) {
       return console.error('Error fetching events:', result);
     }
     const data = await result.json();
 
-    console.log(
-      '------@@@@@@@@@@@@@@@@@@@@@@@@---getAllEvents---data.events',
-      data?.events
-    );
+    // console.log(
+    //   '------@@@@@@@@@@@@@@@@@@@@@@@@---getAllEvents---data.events',
+    //   data?.events
+    // );
 
     return data.events;
   } catch (err) {

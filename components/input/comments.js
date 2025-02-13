@@ -40,7 +40,7 @@ function Comments(props) {
   async function addCommentHandler(commentData) {
     notificationCtx.showNotification({
       title: 'Sending comment...',
-      message: 'Your comment is currently being stored into a database.',
+      message: 'Your comment is currently being stored into a movieList.',
       status: 'pending',
     });
 

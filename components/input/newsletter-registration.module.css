@@ -6,6 +6,9 @@
 
 .newsletter h2 {
   text-align: center;
+  color: #03be9f;
+  margin-bottom: 1rem;
+  font-weight: lighter;
 }
 
 .control input {

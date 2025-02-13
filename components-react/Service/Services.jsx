@@ -76,7 +76,7 @@ const Services = () => {
             Icon={SiMysql}
             title={`SQL & Sequalize`}
             level={`Senior Level`}
-            disc={`Expert in SQL databases like SQLite, MySQL, PostgreSQL,..`}
+            disc={`Expert in SQL movieLists like SQLite, MySQL, PostgreSQL,..`}
           />
         </Fade>
         {/* </Slide> */}

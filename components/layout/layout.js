@@ -11,15 +11,15 @@ function Layout(props) {
 
   const activeNotification = notificationCtx.notification;
   const [landing, setLanding] = useState(true);
-  const aTrue = () => {
+  const toLanding = () => {
     setLanding(false);
   };
   return (
     <Fragment>
-      {/* {landing && <LandingPage aTrue={aTrue} />} */}
-      {landing && <App aTrue={aTrue} />}
+      {/* {landing && <LandingPage toLanding={toLanding} />} */}
+      {landing && <App toLanding={toLanding} />}
 
-      {!landing && <MainHeader />}
+      {!landing && <MainHeader toLanding={toLanding}/>}
       {!landing && <main>{props.children}</main>}
       {!landing && activeNotification && (
         <Notification

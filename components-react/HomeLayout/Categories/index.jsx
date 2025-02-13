@@ -1,11 +1,11 @@
-import React from "react";
-import CategoryContent from "./CategoryContent";
-import { VideoData } from "./Data";
-import { Container, Wrapper } from "./styles";
+import React from 'react';
+import CategoryContent from './CategoryContent';
+import { VideoData } from './Data';
+import { Container, Wrapper } from './styles';
 
-function Categories() {
+function Categories(props) {
   return (
-    <Container>
+    <Container onClick={props.toLanding}>
       {VideoData?.map((item) => (
         <Wrapper key={item.id}>
           <CategoryContent

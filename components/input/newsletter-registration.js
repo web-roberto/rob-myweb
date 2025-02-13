@@ -59,7 +59,7 @@ function NewsletterRegistration() {
 
   return (
     <section className={classes.newsletter}>
-      <h2>Sign up to stay updated!</h2>
+      <h2>Sign up to make comments !!</h2>
       <form onSubmit={registrationHandler}>
         <div className={classes.control}>
           <input

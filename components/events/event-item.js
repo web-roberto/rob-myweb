@@ -24,29 +24,34 @@ function EventItem(props) {
 
   return (
     <li className={classes.item}>
-      <Image src={'/' + image} alt={title} width={250} height={160} />
+      <Image
+        src={'/' + image}
+        alt={title}
+        width={250}
+        height={160}
+      />
       <div className={classes.content}>
         <div className={classes.summary}>
           <h2>{title}</h2>
           <div className={classes.project}>
-          <CpuIcon />
-          <span className={classes.code} >Technologies used:&nbsp;</span>
-          <span>{technologies.map((tech) => tech + ', ')}</span>
-        </div>
-        <div className={classes.project}>
-          <AppIcon />
-          <span className={classes.code}> Live:&nbsp;</span>
-          <Link href={url} target="_blank">
-            {url}
-          </Link>
-        </div>
-        <div className={classes.project}>
-          <CodeIcon />
-          <span className={classes.code}> Github: &nbsp;</span>
-          <Link href={urlgithub} target="_blank">
-            {urlgithub}
-          </Link>
-        </div>
+            <CpuIcon />
+            <span className={classes.code}>Technologies used:&nbsp;</span>
+            <span>{technologies.map((tech) => tech + ', ')}</span>
+          </div>
+          <div className={classes.project}>
+            <AppIcon />
+            <span className={classes.code}> Live:&nbsp;</span>
+            <Link href={url} target="_blank">
+              {url}
+            </Link>
+          </div>
+          <div className={classes.project}>
+            <CodeIcon />
+            <span className={classes.code}> Github: &nbsp;</span>
+            <Link href={urlgithub} target="_blank">
+              {urlgithub}
+            </Link>
+          </div>
 
           <div className={classes.date}>
             <DateIcon />

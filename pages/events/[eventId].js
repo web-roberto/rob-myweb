@@ -18,7 +18,7 @@ function EventDetailPage(props) {
       </div>
     );
   }
-
+  console.log('---------------------------------------EventDetailPage----event',{ event });
   return (
     <Fragment>
       <Head>

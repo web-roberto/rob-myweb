@@ -31,7 +31,7 @@ const ProfComponent = () => {
             I manage many packages Express-friendly like GraphQl, also API Rest.
             Next 15,14,13 Server and Client Side Rendering.
             <br />I master CSS, SASS, Styled Components (like this web) Tailwind
-            (+ DaisyUI), MUI ... <br />I master SQL databases (+ Sequalize).
+            (+ DaisyUI), MUI ... <br />I master SQL movieLists (+ Sequalize).
           </p>
           <button>
             Let's talk &nbsp;

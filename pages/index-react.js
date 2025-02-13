@@ -10,6 +10,8 @@ import Services from '../components-react/Service/Services';
 import HomeLayout from '../components-react/HomeLayout';
 
 function App(props) {
+  //console.error('-----------App------props-', props);
+
   return (
     <Container>
       <Banner>
@@ -19,8 +21,8 @@ function App(props) {
 
       <Services />
       {/* <LightColor> */}
-        {/* <Projects aTrue={props.aTrue} /> */}
-        <HomeLayout />
+      {/* <Projects toLanding={props.toLanding} /> */}
+      <HomeLayout toLanding={props.toLanding} />
       {/* </LightColor> */}
       <Clients />
       <LightColor>

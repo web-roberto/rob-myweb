@@ -37,7 +37,7 @@ function AllEventsPage(props) {
 
 export async function getStaticProps() {
   const events = await getAllEvents();
-  console.log('--------AllEventsPage------getStaticProps---events:', events);
+  //console.log('--------AllEventsPage------getStaticProps---events:', events);
 
  //ROBERTO  if (events.length==0) return {props:{events:[]}};
   return {
