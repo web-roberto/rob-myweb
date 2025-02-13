@@ -1,7 +1,11 @@
 import { Fragment } from 'react';
 import Head from 'next/head';
 
-import { getEventById, getFeaturedEvents } from '../../helpers/api-util';
+import {
+  getEventById,
+  getFeaturedEvents,
+  getAllEvents,
+} from '../../helpers/api-util';
 import EventSummary from '../../components/event-detail/event-summary';
 import EventLogistics from '../../components/event-detail/event-logistics';
 import EventContent from '../../components/event-detail/event-content';
@@ -18,7 +22,10 @@ function EventDetailPage(props) {
       </div>
     );
   }
-  console.log('---------------------------------------EventDetailPage----event',{ event });
+  console.log(
+    '---------------------------------------EventDetailPage----event',
+    { event }
+  );
   return (
     <Fragment>
       <Head>
@@ -46,6 +53,7 @@ function EventDetailPage(props) {
 export async function getStaticProps(context) {
   const eventId = context.params.eventId;
 
+  //TODO ahora llamaré a al api api/events/1
   const event = await getEventById(eventId);
 
   return {
@@ -58,6 +66,7 @@ export async function getStaticProps(context) {
 
 export async function getStaticPaths() {
   const events = await getFeaturedEvents();
+  //const events = await getAllEvents();
 
   const paths = events.map((event) => ({ params: { eventId: event._id } }));
 

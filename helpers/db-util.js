@@ -25,12 +25,14 @@ export async function getAllDocuments(client, collection, sort) {
 export async function getDocumentById2(client, collection, sort, id) {
   console.log('-------XXXXXXXXXX - dentro de ----getDocumentById2----id:', id);
   const db = client.db();
-  const result = await db.collection(collection).findOne({ _id: ObjectId(id.id) });
+  const result = await db
+    .collection(collection)
+    .findOne({ _id: ObjectId(id.id) });
   return result;
 }
 
 export async function getDocumentById(client, collection, sort, id) {
-  console.log('-------XXXXXXXXXX - dentro de ----getDocumentById----id',id);
+  console.log('-------XXXXXXXXXX - dentro de ----getDocumentById----id', id);
 
   const allDocuments = await getAllDocuments(client, collection, sort);
 
@@ -39,7 +41,9 @@ export async function getDocumentById(client, collection, sort, id) {
     //   '-------XxXXXXXXXXXXXX-- getDocumentById-- allDocuments---',
     //   allDocuments
     // );
-    const res = allDocuments.find((docu) => String(docu._id) === String(id.id));
+    // const res = allDocuments.find((docu) => String(docu._id) === String(id.id));
+    const res = allDocuments.find((docu) => String(docu._id) === String(id));
+
     return res;
   } else return [];
 }
