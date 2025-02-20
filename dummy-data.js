@@ -50,6 +50,6 @@ export function getFilteredEvents(dateFilter) {
   return filteredEvents;
 }
 
-export function getEventById(id) {
-  return DUMMY_EVENTS.find((event) => event.id === id);
+export function getEventById(props) {
+  return DUMMY_EVENTS.find((event) => event.id === props.id);
 }

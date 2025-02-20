@@ -2,6 +2,7 @@ import React from 'react';
 import CategoryContent from './CategoryContent';
 import { VideoData } from './Data';
 import { Container, Wrapper } from './styles';
+require('dotenv').config();
 
 function Categories(props) {
   return (

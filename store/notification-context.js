@@ -1,3 +1,4 @@
+'use client';
 import { createContext, useState, useEffect } from 'react';
 require('dotenv').config();
 
@@ -18,7 +19,7 @@ export function NotificationContextProvider(props) {
     ) {
       const timer = setTimeout(() => {
         setActiveNotification(null);
-      }, process.env.PORT||1234);
+      }, process.env.PORT || 1234);
 
       return () => {
         clearTimeout(timer);

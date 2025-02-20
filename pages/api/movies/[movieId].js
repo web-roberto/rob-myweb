@@ -28,12 +28,12 @@ async function handler(req, res) {
     // const nid = ObjectId(movieId);
 
     try {
-       //puedo usar getDocumentById tambien funciona bien.
+      //puedo usar getDocumentById tambien funciona bien.
       const documents = await getDocumentById2(
         client,
         'movies',
-        { _id: -1 },
-        { id: movieId }
+        { _id: 1 },
+        { _id: movieId }
       );
       res.status(200).json({ movies: documents });
     } catch (error) {

@@ -2,6 +2,8 @@
 //   const response = await fetch('https://nextjs-course-c81cc-default-rtdb.firebaseio.com/events.json');
 //   const data = await response.json();
 
+import { movieList } from '../components-react/movieList/movieList';
+
 //   const events = [];
 
 //   for (const key in data) {
@@ -39,45 +41,24 @@
 
 ////ROBERTO
 require('dotenv').config();
-let fullPath;
-if (process.env.URL) {
-  fullPath = process.env.URL + '/api/events/';
-} else fullPath = '/api/events/';
 
 export async function getAllEvents() {
-  // console.log(
-  //   '--------@@@@@@@@@@@@@@@@@@@@@@@@--getAllEvents--fullPath:',
-  //   fullPath
-  // );
+  let fullPath;
+  if (process.env.URL) {
+    fullPath = process.env.URL + '/api/events/';
+  } else fullPath = '/api/events/';
+
   try {
-    const result = await fetch(fullPath);
-    // console.log(
-    //   '---@@@@@@@@@@@@@@@@@@@@@@@@-result del fetch de Eventos',
-    //   result
-    // );
+    const result = await fetch(fullPath); //GET ALL a api/events
     if (!result.ok) {
       return console.error('Error fetching events:', result);
     }
     const data = await result.json();
-
-    // console.log(
-    //   '------@@@@@@@@@@@@@@@@@@@@@@@@---getAllEvents---data.events',
-    //   data?.events
-    // );
-
     return data.events;
   } catch (err) {
     console.error('---error leyendo eventos', { err });
     return [];
   }
-
-  // fetch(fullPath, {})
-  //   .then((response) => response.json())
-  //   .then((data) => {
-  //     console.log('----------- Eventos leídos de Mongo------:', data?.events);
-  //     return data.events;
-  //   });
-  // return []; //while is being processin the promise
 }
 
 export async function getFeaturedEvents() {
@@ -110,4 +91,79 @@ export async function getFilteredEvents(dateFilter) {
   } else return [];
 
   return filteredEvents;
+}
+
+//**************+ MOVIES ***************************** */
+export async function getAllMovies() {
+  //fake movieList
+  //return movieList;
+
+  let fullPathMovie;
+  if (process.env.URL) {
+    fullPathMovie = process.env.URL + '/api/movies/';
+  } else fullPathMovie = '/api/movies/';
+  console.log(
+    '-------------------getAllMovies--fullPathMovie--',
+    fullPathMovie
+  );
+  try {
+    const result = await fetch(fullPathMovie); //GET ALL a api/movies
+
+    console.log('-------------------getAllMovies--result--', result);
+    if (!result.ok) {
+      return console.error('Error fetching movies:', result);
+    }
+    const data = await result.json();
+    console.log(
+      '----------------------getAllMovies--data--',
+      { data },
+      data.movies
+    );
+
+    //return data.movies;
+    return data.movies;
+  } catch (err) {
+    console.error('---error leyendo movies', { err });
+    return [];
+  }
+}
+
+export async function getMovieById(id) {
+  console.log('----------------------getMovieById---id-', id);
+  const allMovies = await getAllMovies();
+  console.log('------------------getMovieById---allMovies-', allMovies);
+  if (!allMovies || allMovies.length === 0) return;
+  if (allMovies) return allMovies.find((movie) => movie._id === id);
+  else return [];
+}
+export async function getMovieById2(id) {
+  console.log('----------------------getMovieById---id-', id);
+  let fullPathMovie;
+  if (process.env.URL) {
+    fullPathMovie = process.env.URL + '/api/movies/' + id;
+  } else fullPathMovie = '/api/movies/' + id;
+  console.log(
+    '-------------------getMovieById2--fullPathMovie--',
+    fullPathMovie
+  );
+  try {
+    const result = await fetch(fullPathMovie); //GET ONE a api/movies/id
+
+    console.log('-------------------getAllMovies--result--', result);
+    if (!result.ok) {
+      return console.error('Error fetching movies:', result);
+    }
+    const data = await result.json();
+    console.log(
+      '----------------------getAllMovies--data--',
+      { data },
+      data.movies
+    );
+
+    //return data.movies;
+    return data.movies;
+  } catch (err) {
+    console.error('---error leyendo movies', { err });
+    return [];
+  }
 }

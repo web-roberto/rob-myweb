@@ -8,10 +8,10 @@ import {
 } from '../../../helpers/db-util';
 
 async function handler(req, res) {
-  const movieId = req.query.movieId;
+  const eventId = req.query.eventId;
   console.log(
-    '--------XXXXXXXXXXXXX-----en/movies/movieId----movieId:',
-    movieId
+    '--------XXXXXXXXXXXXX-----en/events/eventId----eventId:',
+    eventId
   );
 
   let client;
@@ -28,17 +28,17 @@ async function handler(req, res) {
     // const nid = ObjectId(movieId);
 
     try {
-       //puedo usar getDocumentById tambien funciona bien.
+      //puedo usar getDocumentById tambien funciona bien.
       const documents = await getDocumentById2(
         client,
-        'movies',
-        { _id: -1 },
-        { id: movieId }
+        'events',
+        { _id: 1 },
+        { id: eventId }
       );
-      res.status(200).json({ movies: documents });
+      res.status(200).json({ events: documents });
     } catch (error) {
-      res.status(500).json({ message: 'Getting movies failed.' });
-      console.error('Getting movies failed');
+      res.status(500).json({ message: 'Getting events failed.' });
+      console.error('Getting events failed');
     }
   }
 

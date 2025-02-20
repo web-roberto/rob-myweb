@@ -53,14 +53,14 @@ async function handler(req, res) {
       const emailExists = await getAllDocumentsWhere(
         client,
         'newsletter',
-        { _id: -1 },
+        { _id: 1 },
         { email: email }
       );
       console.log(
         '--------------INSERT COMMENT verify email ---------------getDocumentById------emailExists--',
         emailExists
       );
-      if (emailExists.length == 0) {
+      if (emailExists.length == 0 || !emailExists) {
         res.status(422).json({ message: "Email doesn't exist!!" });
         console.error("Email doesn't exist!!");
         return;
@@ -76,7 +76,7 @@ async function handler(req, res) {
 
   if (req.method === 'GET') {
     try {
-      const documents = await getAllDocuments(client, 'comments', { _id: -1 });
+      const documents = await getAllDocuments(client, 'comments', { _id: 1 });
       res.status(200).json({ comments: documents });
     } catch (error) {
       res.status(500).json({ message: 'Getting comments failed.' });

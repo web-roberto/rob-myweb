@@ -22,10 +22,10 @@ function EventDetailPage(props) {
       </div>
     );
   }
-  console.log(
-    '---------------------------------------EventDetailPage----event',
-    { event }
-  );
+  // console.log(
+  //   '---------------------------------------EventDetailPage----event',
+  //   event
+  // );
   return (
     <Fragment>
       <Head>
@@ -53,14 +53,15 @@ function EventDetailPage(props) {
 export async function getStaticProps(context) {
   const eventId = context.params.eventId;
 
-  //TODO ahora llamaré a al api api/events/1
+  //No llamo a al api api/events/1 pq estoy ya en el server.
+  //llamo a una función que llama a las operaciones sobre Mongo saltándose la api
   const event = await getEventById(eventId);
 
   return {
     props: {
       selectedEvent: event,
     },
-    revalidate: 30,
+    revalidate: 100,
   };
 }
 

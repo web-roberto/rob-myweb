@@ -3,23 +3,20 @@ import React from 'react';
 import styled from 'styled-components';
 require('dotenv').config();
 
-
 const Project = (props) => {
   const { img, disc } = props.item;
-//   let fullPath;
-//   if (process.env.URL){
-//     fullPath=process.env.URL + `/public${img}`
-//   } else {fullPath=`${img}`}
- 
+  //   let fullPath;
+  //   if (process.env.URL){
+  //     fullPath=process.env.URL + `/public${img}`
+  //   } else {fullPath=`${img}`}
+
   return (
     <Container className="project">
       {/* <img src={img} alt="project" /> */}
       {/* <Image src={img} alt="project" width={480} height={480} /> */}
-            {/* <Image src={'/' + img} alt="project" width={250} height={160} /> */}
-          
-                    <Image src={img} alt="project" width={400} height={400} />
+      {/* <Image src={'/' + img} alt="project" width={250} height={160} /> */}
 
-            
+      <Image src={img} alt="project" width={40} height={40} />
       <div className="disc">
         <h1>Description</h1>
         <p>

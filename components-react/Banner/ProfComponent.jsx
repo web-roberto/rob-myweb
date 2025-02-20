@@ -8,6 +8,7 @@ import { BsMicrosoftTeams } from 'react-icons/bs';
 
 import { Slide } from 'react-awesome-reveal';
 import Image from 'next/image';
+import ComposedChartWith from './ComposedChartWithAxisLabels';
 
 const ProfComponent = () => {
   return (
@@ -48,6 +49,9 @@ const ProfComponent = () => {
             Let's connect &nbsp; <BsMicrosoftTeams /> &nbsp; Teams: &nbsp;
             <span>r.alonsoperez@edu.gva.es</span>
           </button>
+          {/* <MyChart>
+            <ComposedChartWith />
+          </MyChart> */}
           <Download>
             <a
               className="btn"
@@ -262,4 +266,16 @@ const Download = styled.div`
   a:active {
     text-decoration: none;
   }
+`;
+const MyChart = styled.div`
+  margin-top: -3rem;
+  text-align: right;
+  display: flex;
+  flex-direction: row;
+  align-items: end;
+  justify-content: end;
+  gap: 1rem;
+  font-weight: bold;
+  width: 20rem;
+  height: 20rem;
 `;

@@ -28,9 +28,15 @@ function EventLogistics(props) {
       </div>
       <ul className={classes.list}>
         <LogisticsItem icon={CpuIcon}>
-          <span style={{ color: '#18e0d0' }}>Technologies used:</span>
-          <span>{technologies}</span>
-          <span>{technologies.map((tech) => tech + ', ')}</span>
+          <span>Technologies used:</span>
+          {/* <span>{technologies}</span> */}
+          <span style={{ color: '#18e0d0' }}>
+            {technologies && technologies.map((tech) => tech + ', ')}
+          </span>
+          {console.log(
+            '----------------------------------------TECNOLOGIAS-----',
+            technologies
+          )}{' '}
         </LogisticsItem>
         <LogisticsItem icon={AppIcon}>
           Live:&nbsp;

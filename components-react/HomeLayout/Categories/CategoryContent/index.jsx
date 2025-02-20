@@ -6,7 +6,7 @@ function CategoryContent({ video, defaultImage, name }) {
   return (
     <HoverVideoPlayer
       videoSrc={video}
-      pausedOverlay={<Image src={defaultImage} alt={name} layout="fill" />}
+      pausedOverlay={<Image src={defaultImage} alt={name} fill />}
     />
   );
 }

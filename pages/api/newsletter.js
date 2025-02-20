@@ -27,7 +27,7 @@ async function handler(req, res) {
       const emailExists = await getAllDocumentsWhere(
         client,
         'newsletter',
-        { _id: -1 },
+        { _id: 1 },
         { email: userEmail }
       );
       console.log(

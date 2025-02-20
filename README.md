@@ -1,5 +1,6 @@
 # Roberto's :
 
+    nvm use lts/hydrogen (v18)
     "dev": "next dev -p 1234",
     npm cache clean --force  -> antes de cada "npm run dev"
 
@@ -259,7 +260,19 @@ No funciona el carrusel en Slider.jsx
 # solucion:
 
 añado 'use client' pq no funciona para next pero si para react.
-    "react-slick": "^0.22.3",
+"react-slick": "^0.22.3",
 I am using next 14.1.4 and react-slick 0.30.2 and this solved the issue for me
 
 yarn add @next/codemod@latest
+
+Problema bucle infinito con 'Fast Refresh' y solucionado con lo de abajo:(problema del navegador) -> inhabilitar la cache
+https://stackoverflow.com/questions/75401816/next-js-13-stuck-in-fast-refresh-loop-on-chrome
+
+# Roberto's los datos tras leer Mongodb nen result.data (si no pongo el 'data' no funciona)
+
+# TODO
+
+-> show used technologies in the card
+
+projects from Vercel, From Heroku, From Netlify, From Github
+coger los links de cv de antes: https://web-roberto.github.io/portfolio-cv/

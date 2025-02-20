@@ -62,3 +62,56 @@ export async function getAllDocumentsWhere(client, collection, sort, where) {
     return documents;
   } else return [];
 }
+
+// export const GetAllMovies = async (client) => {
+//   //const db = client.db();
+//   try {
+//     const documents = await getAllDocuments(client, 'movies', { _id: 1 });
+//     //res.status(200).json({ movies: documents });
+//     client.close();
+//     return documents;
+
+//   } catch (error) {
+//     res.status(500).json({ message: 'Getting movies failed.' });
+//     console.error('Error getAllDocuments "movies" ');
+//     client.close();
+//     return;
+//   }
+
+// const documents = await db.collection(collection).find().sort(sort).toArray();
+
+// async function handler(req, res) {
+// const eventId = req.query.eventId; //adds a comment to the eventsId - POST /api/comments/[eventId]
+
+// let client;
+// try {
+//   client = await connectdatabase();
+// } catch (error) {
+//   res.status(500).json({ message: 'Connecting to the database failed!' });
+//   console.error('Error connectdatabase api/movies ');
+//   return;
+// }
+
+// if (req.method === 'GET') {
+// try {
+//   const documents = await getAllDocuments(client, 'movies', { _id: 1 });
+//   res.status(200).json({ movies: documents });
+//   client.close();
+// } catch (error) {
+//   res.status(500).json({ message: 'Getting movies failed.' });
+//   console.error('Error getAllDocuments "movies" ');
+//   client.close();
+//   return;
+// }
+// }
+// client.close();
+//}
+
+//return await fetch(`${process.env.NEXT_PUBLIC_API_BASE_URL}/api/movies`).then((res) => res.json());
+//return await fetch(process.env.URL + '/api/movies').then((res) => res.json());
+
+// export const GetOneMovies = async (id) => {
+//   //return await fetch(`${process.env.NEXT_PUBLIC_API_BASE_URL}/api/movies/${id}`).then((res) => res.json());
+//   return await fetch(process.env.URL + '/api/movies/${id}').then((res) =>res.json()
+//   );
+// };

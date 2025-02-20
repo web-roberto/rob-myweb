@@ -1,3 +1,4 @@
+'use client';
 import { Fragment, useEffect, useState } from 'react';
 import { useRouter } from 'next/router';
 import useSWR from 'swr';
@@ -9,7 +10,7 @@ import ResultsTitle from '../../components/events/results-title';
 import Button from '../../components/ui/button';
 import ErrorAlert from '../../components/ui/error-alert';
 
- function FilteredEventsPage(props) {
+function FilteredEventsPage(props) {
   const [loadedEvents, setLoadedEvents] = useState();
   const router = useRouter();
   let data, error;
@@ -26,7 +27,7 @@ import ErrorAlert from '../../components/ui/error-alert';
       }
     };
     fetchEvents();
-  }, [])
+  }, []);
 
   let pageHeadData = (
     <Head>

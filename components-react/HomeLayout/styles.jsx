@@ -41,3 +41,15 @@ export const Container = styled.main`
     top: 3rem;
   }
 `;
+
+
+export const Blinker = styled.h4`
+animation: blinker 1s linear infinite;
+
+@keyframes blinker {
+  50% {
+    opacity: 0;
+  }
+}
+
+`

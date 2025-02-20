@@ -8,9 +8,11 @@ import Footer from '../components-react/Footer/Footer';
 import Projects from '../components-react/Projects/Projects';
 import Services from '../components-react/Service/Services';
 import HomeLayout from '../components-react/HomeLayout';
+import { getAllMovies } from '../helpers/api-util';
 
 function App(props) {
   //console.error('-----------App------props-', props);
+  //if (!props?.movieResults) return;
 
   return (
     <Container>
@@ -22,7 +24,10 @@ function App(props) {
       <Services />
       {/* <LightColor> */}
       {/* <Projects toLanding={props.toLanding} /> */}
-      <HomeLayout toLanding={props.toLanding} />
+      <HomeLayout
+        toLanding={props.toLanding}
+        // movieResults={props.movieResults}
+      />
       {/* </LightColor> */}
       <Clients />
       <LightColor>
@@ -32,6 +37,17 @@ function App(props) {
   );
 }
 
+// export async function getStaticProps() {
+//   const movieResults = await getAllMovies();
+//   //console.log('----pages/index.js---------getServerSideProps-----movieResults-----', movieResults );
+//   if (!movieResults) return { props: { movieResults: [] } };
+//   return {
+//     props: {
+//       movieResults: movieResults,
+//     },
+//     revalidate: 1800, //era 1800 - en getServerSideProps no hay revalidate
+//   };
+// }
 export default App;
 
 const Container = styled.div``;
