@@ -1,5 +1,5 @@
 // export async function getAllEvents() {
-//   const response = await fetch('https://nextjs-course-c81cc-default-rtdb.firebaseio.com/events.json');
+//   const response = await fetch('https://web-roberto-c81cc-default-rtdb.firebaseio.com/events.json');
 //   const data = await response.json();
 
 import { movieList } from '../components-react/movieList/movieList';
@@ -54,7 +54,12 @@ export async function getAllEvents() {
       return console.error('Error fetching events:', result);
     }
     const data = await result.json();
-    return data.events;
+    //reordeno por campo ordeded
+    const ordered = data.events.sort((a, b) => {
+      return a.ordered - b.ordered;
+    });
+    console.log('######################### array ordenado', { ordered });
+    return ordered;
   } catch (err) {
     console.error('---error leyendo eventos', { err });
     return [];

@@ -32,7 +32,10 @@ function EventDetailPage(props) {
         <title>{event.title}</title>
         <meta name="description" content={event.description} />
       </Head>
-      <EventSummary title={event.title} />
+      <EventSummary title={event.title} description={event.description} />
+      {/* <EventContent>
+        <p>{event.description}</p>
+      </EventContent> */}
       <EventLogistics
         date={event.date}
         address={event.location}
@@ -42,9 +45,7 @@ function EventDetailPage(props) {
         url={event.url}
         urlgithub={event.urlgithub}
       />
-      <EventContent>
-        <p>{event.description}</p>
-      </EventContent>
+
       <Comments eventId={event._id} />
     </Fragment>
   );

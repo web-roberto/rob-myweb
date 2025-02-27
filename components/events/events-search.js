@@ -12,7 +12,10 @@ function EventsSearch(props) {
 
     const selectedYear = yearInputRef.current.value;
     const selectedMonth = monthInputRef.current.value;
-console.log('-----------------------------------------selectedMonth-',selectedMonth)
+    console.log(
+      '-----------------------------------------selectedMonth-',
+      selectedMonth
+    );
     props.onSearch(selectedYear, selectedMonth);
   }
 
@@ -22,10 +25,11 @@ console.log('-----------------------------------------selectedMonth-',selectedMo
         <div className={classes.control}>
           <label htmlFor="year">Year</label>
           <select id="year" ref={yearInputRef}>
-            <option value="2026">2026</option>
             <option value="2025">2025</option>
             <option value="2024">2024</option>
             <option value="2023">2023</option>
+            <option value="2023">2022</option>
+            <option value="2023">2021</option>
           </select>
         </div>
         <div className={classes.control}>

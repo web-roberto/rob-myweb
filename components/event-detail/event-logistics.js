@@ -9,6 +9,7 @@ import classes from './event-logistics.module.css';
 import Link from 'next/link';
 import CodeIcon from '../icons/code';
 import AppIcon from '../icons/app';
+import { Blinker } from '../../components-react/HomeLayout/styles';
 
 function EventLogistics(props) {
   const { date, address, image, imageAlt, technologies, url, urlgithub } =
@@ -38,12 +39,14 @@ function EventLogistics(props) {
             technologies
           )}{' '}
         </LogisticsItem>
-        <LogisticsItem icon={AppIcon}>
-          Live:&nbsp;
-          <Link href={url} target="_blank">
-            {url}
-          </Link>
-        </LogisticsItem>
+        <Blinker>
+          <LogisticsItem icon={AppIcon}>
+            Live:&nbsp;
+            <Link href={url} target="_blank">
+              {url}
+            </Link>
+          </LogisticsItem>
+        </Blinker>
         <LogisticsItem icon={CodeIcon}>
           Code in Github: &nbsp;
           <Link href={urlgithub} target="_blank">

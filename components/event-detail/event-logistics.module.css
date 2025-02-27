@@ -5,7 +5,7 @@
   padding: 0.5rem;
   max-width: 50rem;
   width: 90%;
-  margin: -3rem auto;
+  margin: -2rem auto;
   color: #d5eeeb;
   display: flex;
   justify-content: space-between;
@@ -41,6 +41,9 @@
   cursor: pointer;
   color: #18e0d0;
 }
+
+
+
 
 .logistics address {
   white-space: pre;

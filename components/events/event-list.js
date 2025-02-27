@@ -24,6 +24,7 @@ function EventList(props) {
           technologies={event.technologies}
           url={event.url}
           urlgithub={event.urlgithub}
+          description={event.description}
         />
       ))}
     </ul>
