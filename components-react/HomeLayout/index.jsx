@@ -8,9 +8,9 @@ import { Blinker, Container } from './styles';
 //import { movieList } from '../movieList/movieList';
 
 export function HomeLayout(props) {
-  //console.log('#########################HomeLayout## movieList', movieList);
-  //console.log('#########################HomeLayout## movieResults', props?.movieResults);
-  
+  ////console.log('#########################HomeLayout## movieList', movieList);
+  ////console.log('#########################HomeLayout## movieResults', props?.movieResults);
+
   // if (!props?.movieResults) return;
   return (
     <Container>

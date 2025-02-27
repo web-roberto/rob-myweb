@@ -30,10 +30,10 @@ async function handler(req, res) {
         { _id: 1 },
         { email: userEmail }
       );
-      console.log(
-        '--------------INSERT NEWSLETTER verify email ---------------getAllDocumentsWhere------emailExists--',
-        emailExists
-      );
+      //console.log(
+      //   '--------------INSERT NEWSLETTER verify email ---------------getAllDocumentsWhere------emailExists--',
+      //   emailExists
+      // );
       if (emailExists.length !== 0) {
         res.status(422).json({ message: 'Email already exists!!' });
         console.error('Email already exists!!');

@@ -9,7 +9,7 @@ import NotificationContext from '../../store/notification-context';
 
 function Comments(props) {
   const { eventId } = props;
-  console.log('=================== en Comments.---props:', { props });
+  //console.log('=================== en Comments.---props:', { props });
 
   const notificationCtx = useContext(NotificationContext);
 

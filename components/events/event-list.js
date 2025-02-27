@@ -2,8 +2,8 @@ import EventItem from './event-item';
 import classes from './event-list.module.css';
 
 function EventList(props) {
-  console.log('---------------------------- En EventList', { props });
-  console.log('---------------------------- En EventList', props.items);
+  //console.log('---------------------------- En EventList', { props });
+  //console.log('---------------------------- En EventList', props.items);
 
   let items;
   if (!props?.items) {

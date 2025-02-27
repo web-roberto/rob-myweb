@@ -22,7 +22,7 @@ function EventDetailPage(props) {
       </div>
     );
   }
-  // console.log(
+  // //console.log(
   //   '---------------------------------------EventDetailPage----event',
   //   event
   // );

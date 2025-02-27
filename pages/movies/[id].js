@@ -10,19 +10,19 @@ import { useRouter } from 'next/router';
 require('dotenv').config();
 
 export default function MovieInformation(props) {
-  console.log(
-    '------------------pages/movies/[moviedId].js-----los props de Statis a ppal----props----',
-    {props}
-  );
+  //console.log(
+  //   '------------------pages/movies/[moviedId].js-----los props de Statis a ppal----props----',
+  //   {props}
+  // );
   //const movie = props?.movie;
   if (!props?.movie) return;
   const movieRead = props.movie;
   // const [movieRead, setMovieRead] = useState();
   // const router = useRouter();
-  // console.log('---------pages/movies/[id].js-----ppal----router-', movrouterie);
+  // //console.log('---------pages/movies/[id].js-----ppal----router-', movrouterie);
 
   // const movie = router?.query?.id;
-  // console.log('---------pages/movies/[id].js-----ppal----props.movie-', movie);
+  // //console.log('---------pages/movies/[id].js-----ppal----props.movie-', movie);
   // useEffect(() => {
   //   const getMovie = async () => {
   //     const movieResult = await getMovieById(movie);
@@ -55,12 +55,12 @@ export default function MovieInformation(props) {
 // ********************* de Max
 export const getStaticProps = async (context) => {
   const id = context.params.id;
-  console.log('---------pages/movies/[id].js-----getStaticProps-----id-', id);
+  //console.log('---------pages/movies/[id].js-----getStaticProps-----id-', id);
   const movie = await getMovieById(id);
-  console.log(
-    '------------------pages/movies/[id].js-----getStaticProps----movieResults---tras getMovieById-',
-    movie
-  );
+  //console.log(
+  //   '------------------pages/movies/[id].js-----getStaticProps----movieResults---tras getMovieById-',
+  //   movie
+  // );
   return {
     props: {
       movie: movie,
@@ -82,15 +82,15 @@ export const getStaticProps = async (context) => {
 //****** de Max
 export const getStaticPaths = async () => {
   const movies = await getAllMovies();
-  console.log(
-    '------------------pages/movies/[id].js-----getStaticPaths----movies----',
-    movies
-  );
+  //console.log(
+  //   '------------------pages/movies/[id].js-----getStaticPaths----movies----',
+  //   movies
+  // );
   const paths = movies?.map((movie) => ({ params: { id: movie._id } })); // params: { id: String(movie.id) },
-  console.log(
-    '------------------pages/movies/[moviedId].js-----getStaticPaths----paths----',
-    paths
-  );
+  //console.log(
+  //   '------------------pages/movies/[moviedId].js-----getStaticPaths----paths----',
+  //   paths
+  // );
   return {
     paths: paths,
     fallback: 'blocking', //de Disney pq Max es 'blocking'

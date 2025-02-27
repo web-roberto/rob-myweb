@@ -15,7 +15,7 @@ function FilteredEventsPage(props) {
   const router = useRouter();
   let data, error;
   const filterData = router.query.slug;
-  console.log('--------------------------', { filterData });
+  //console.log('--------------------------', { filterData });
   useEffect(() => {
     const fetchEvents = async () => {
       try {

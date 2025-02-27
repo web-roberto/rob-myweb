@@ -51,7 +51,7 @@ function EventItem(props) {
               >
                 {technologies && technologies.map((tech) => tech + ', ')}
               </span>
-              {/* {console.log(
+              {/* {//console.log(
                 '----------------------------------------TECNOLOGIAS-----',
                 technologies
               )} */}

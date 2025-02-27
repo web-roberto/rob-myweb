@@ -48,7 +48,7 @@ import { getAllMovies } from '../../helpers/api-util';
 //     ],
 //   };
 //   if (movies?.length === 0 || !movies) return;
-//   console.log(
+//   //console.log(
 //     '----------FilmsRow---------useEffect---getAllMovies-----movies-',
 //     movies
 //   );
@@ -62,7 +62,7 @@ import { getAllMovies } from '../../helpers/api-util';
 //   </div>
 // ))}
 
-// // console.log(
+// // //console.log(
 // //   '----------FilmsRow---------useEffect---getAllMovies-----resultat-',
 // // );
 
@@ -74,7 +74,7 @@ import { getAllMovies } from '../../helpers/api-util';
 //         {/* {movie.filter((item) => item.type === 'trending') */}
 //         {movies?.map((movie) =>
 //           {
-//           console.log('------movie----',movie._id);
+//           //console.log('------movie----',movie._id);
 //           return (
 //             <Wrapper key={movie._id}>
 //               <Link href={`/movies/${movie._id}`}>
@@ -102,10 +102,10 @@ function FilmsRow() {
     getMovies();
   }, []);
 
-  console.log(
-    '----------FilmsRow---------useEffect---getAllMovies-----movies-',
-    movies
-  );
+  //console.log(
+  //   '----------FilmsRow---------useEffect---getAllMovies-----movies-',
+  //   movies
+  // );
 
   const settings = {
     dots: false,
@@ -139,10 +139,10 @@ function FilmsRow() {
   };
   if (!movies) return;
 
-  console.log(
-    '----------FilmsRow---------useEffect---getAllMovies-----SI HAY movies y a pintar-',
-    { movies }
-  );
+  //console.log(
+  //   '----------FilmsRow---------useEffect---getAllMovies-----SI HAY movies y a pintar-',
+  //   { movies }
+  // );
   //?.filter((item) => item.type === 'trending')
   return (
     <Container>
@@ -150,7 +150,7 @@ function FilmsRow() {
         {movies?.map((movie) => (
           <div key={movie._id}>
             <Wrapper>
-              {console.log('Movie entero:', movie._id)}
+              {/* {console.log('Movie entero:', movie._id)} */}
               {/* <Link href={`/movies/${movie._id}`} legacyBehavior> */}
                 <a>
                   <img src={movie.cardImg} alt={movie.title} />
@@ -166,7 +166,7 @@ function FilmsRow() {
     // <div {...settings}>
     //   {movies?.map((movie) => (
     //       <div key={movie._id}>
-    //         {console.log('Movie entero:', movie._id)}
+    //         {//console.log('Movie entero:', movie._id)}
     //         <arguments href={`/movies/${movie._id}`}>
     //           <img src={movie.cardImg} alt={movie.title} />
     //         </arguments>

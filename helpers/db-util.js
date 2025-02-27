@@ -23,7 +23,7 @@ export async function getAllDocuments(client, collection, sort) {
 }
 
 export async function getDocumentById2(client, collection, sort, id) {
-  console.log('-------XXXXXXXXXX - dentro de ----getDocumentById2----id:', id);
+  //console.log('-------XXXXXXXXXX - dentro de ----getDocumentById2----id:', id);
   const db = client.db();
   const result = await db
     .collection(collection)
@@ -32,12 +32,12 @@ export async function getDocumentById2(client, collection, sort, id) {
 }
 
 export async function getDocumentById(client, collection, sort, id) {
-  console.log('-------XXXXXXXXXX - dentro de ----getDocumentById----id', id);
+  //console.log('-------XXXXXXXXXX - dentro de ----getDocumentById----id', id);
 
   const allDocuments = await getAllDocuments(client, collection, sort);
 
   if (allDocuments) {
-    // console.log(
+    // //console.log(
     //   '-------XxXXXXXXXXXXXX-- getDocumentById-- allDocuments---',
     //   allDocuments
     // );
@@ -49,7 +49,7 @@ export async function getDocumentById(client, collection, sort, id) {
 }
 
 export async function getAllDocumentsWhere(client, collection, sort, where) {
-  //console.log('-------YYYYYYYYYYY - dentro de ----getAllDocumentsWhere----');
+  ////console.log('-------YYYYYYYYYYY - dentro de ----getAllDocumentsWhere----');
 
   const db = client.db();
   const documents = await db
@@ -58,7 +58,7 @@ export async function getAllDocumentsWhere(client, collection, sort, where) {
     .sort(sort)
     .toArray();
   if (documents) {
-    //console.log('-------YYYYYY----', documents );
+    ////console.log('-------YYYYYY----', documents );
     return documents;
   } else return [];
 }

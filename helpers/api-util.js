@@ -58,7 +58,7 @@ export async function getAllEvents() {
     const ordered = data.events.sort((a, b) => {
       return a.ordered - b.ordered;
     });
-    console.log('######################### array ordenado', { ordered });
+    //console.log('######################### array ordenado', { ordered });
     return ordered;
   } catch (err) {
     console.error('---error leyendo eventos', { err });
@@ -68,9 +68,9 @@ export async function getAllEvents() {
 
 export async function getFeaturedEvents() {
   const allEvents = await getAllEvents();
-  console.log('-----------------getFeaturedEvents---getAllEvents--', {
-    allEvents,
-  });
+  //console.log('-----------------getFeaturedEvents---getAllEvents--', {
+  //   allEvents,
+  // });
   if (allEvents) return allEvents.filter((event) => event.isFeatured);
   else return [];
 }
@@ -107,23 +107,23 @@ export async function getAllMovies() {
   if (process.env.URL) {
     fullPathMovie = process.env.URL + '/api/movies/';
   } else fullPathMovie = '/api/movies/';
-  console.log(
-    '-------------------getAllMovies--fullPathMovie--',
-    fullPathMovie
-  );
+  //console.log(
+  //   '-------------------getAllMovies--fullPathMovie--',
+  //   fullPathMovie
+  // );
   try {
     const result = await fetch(fullPathMovie); //GET ALL a api/movies
 
-    console.log('-------------------getAllMovies--result--', result);
+    //console.log('-------------------getAllMovies--result--', result);
     if (!result.ok) {
       return console.error('Error fetching movies:', result);
     }
     const data = await result.json();
-    console.log(
-      '----------------------getAllMovies--data--',
-      { data },
-      data.movies
-    );
+    //console.log(
+    //   '----------------------getAllMovies--data--',
+    //   { data },
+    //   data.movies
+    // );
 
     //return data.movies;
     return data.movies;
@@ -134,36 +134,36 @@ export async function getAllMovies() {
 }
 
 export async function getMovieById(id) {
-  console.log('----------------------getMovieById---id-', id);
+  //console.log('----------------------getMovieById---id-', id);
   const allMovies = await getAllMovies();
-  console.log('------------------getMovieById---allMovies-', allMovies);
+  //console.log('------------------getMovieById---allMovies-', allMovies);
   if (!allMovies || allMovies.length === 0) return;
   if (allMovies) return allMovies.find((movie) => movie._id === id);
   else return [];
 }
 export async function getMovieById2(id) {
-  console.log('----------------------getMovieById---id-', id);
+  //console.log('----------------------getMovieById---id-', id);
   let fullPathMovie;
   if (process.env.URL) {
     fullPathMovie = process.env.URL + '/api/movies/' + id;
   } else fullPathMovie = '/api/movies/' + id;
-  console.log(
-    '-------------------getMovieById2--fullPathMovie--',
-    fullPathMovie
-  );
+  //console.log(
+  //   '-------------------getMovieById2--fullPathMovie--',
+  //   fullPathMovie
+  // );
   try {
     const result = await fetch(fullPathMovie); //GET ONE a api/movies/id
 
-    console.log('-------------------getAllMovies--result--', result);
+    //console.log('-------------------getAllMovies--result--', result);
     if (!result.ok) {
       return console.error('Error fetching movies:', result);
     }
     const data = await result.json();
-    console.log(
-      '----------------------getAllMovies--data--',
-      { data },
-      data.movies
-    );
+    //console.log(
+    //   '----------------------getAllMovies--data--',
+    //   { data },
+    //   data.movies
+    // );
 
     //return data.movies;
     return data.movies;

@@ -1,7 +1,7 @@
 import classes from './comment-list.module.css';
 
 function CommentList(props) {
-  console.log('=================== en CommentList.---props:',{props})
+  //console.log('=================== en CommentList.---props:',{props})
   let items;
   if (!props?.items) {
     return;

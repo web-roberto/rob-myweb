@@ -34,10 +34,11 @@ function EventLogistics(props) {
           <span style={{ color: '#18e0d0' }}>
             {technologies && technologies.map((tech) => tech + ', ')}
           </span>
-          {console.log(
+          {/* {//console.log(
             '----------------------------------------TECNOLOGIAS-----',
             technologies
-          )}{' '}
+          )}{' '} */}
+          {' '}
         </LogisticsItem>
         <Blinker>
           <LogisticsItem icon={AppIcon}>

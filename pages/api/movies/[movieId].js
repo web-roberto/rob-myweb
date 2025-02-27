@@ -9,10 +9,10 @@ import {
 
 async function handler(req, res) {
   const movieId = req.query.movieId;
-  console.log(
-    '--------XXXXXXXXXXXXX-----en/movies/movieId----movieId:',
-    movieId
-  );
+  //console.log(
+  //   '--------XXXXXXXXXXXXX-----en/movies/movieId----movieId:',
+  //   movieId
+  // );
 
   let client;
 

@@ -7,10 +7,10 @@ import {
 
 async function handler(req, res) {
   const eventId = req.query.eventId;
-  console.log(
-    '--------XXXXXXXXXXXXX-----en/comments/evendID----eventId:',
-    eventId
-  );
+  //console.log(
+  //   '--------XXXXXXXXXXXXX-----en/comments/evendID----eventId:',
+  //   eventId
+  // );
 
   let client;
 
@@ -56,10 +56,10 @@ async function handler(req, res) {
         { _id: 1 },
         { email: email }
       );
-      console.log(
-        '--------------INSERT COMMENT verify email ---------------getDocumentById------emailExists--',
-        emailExists
-      );
+      //console.log(
+      //   '--------------INSERT COMMENT verify email ---------------getDocumentById------emailExists--',
+      //   emailExists
+      // );
       if (emailExists.length == 0 || !emailExists) {
         res.status(422).json({ message: "Email doesn't exist!!" });
         console.error("Email doesn't exist!!");

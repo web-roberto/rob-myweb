@@ -12,10 +12,10 @@ function AllEventsPage(props) {
 
   function findEventsHandler(year, month) {
     const fullPath = `/events/${year}/${month}`;
-    console.log(
-      '-----------------------------------findEventsHandler-------año y mes de su hijo-----------fullPath-----',
-      fullPath
-    );
+    //console.log(
+    //   '-----------------------------------findEventsHandler-------año y mes de su hijo-----------fullPath-----',
+    //   fullPath
+    // );
 
     router.push(fullPath);
   }
@@ -40,7 +40,7 @@ function AllEventsPage(props) {
 
 export async function getStaticProps() {
   const events = await getAllEvents();
-  //console.log('--------AllEventsPage------getStaticProps---events:', events);
+  ////console.log('--------AllEventsPage------getStaticProps---events:', events);
 
   //ROBERTO  if (events.length==0) return {props:{events:[]}};
   return {

@@ -74,10 +74,10 @@ const SliderComp = () => {
   const arrowRef = useRef(null);
   let sliderProject = '';
   sliderProject = data.map((item, i) => <Project item={item} key={i} />);
-  console.log(
-    '---------------------------------------------------------------sliderProject----',
-    sliderProject
-  );
+  //console.log(
+  //   '---------------------------------------------------------------sliderProject----',
+  //   sliderProject
+  // );
 
   return (
     <Container>

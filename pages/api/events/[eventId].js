@@ -9,10 +9,10 @@ import {
 
 async function handler(req, res) {
   const eventId = req.query.eventId;
-  console.log(
-    '--------XXXXXXXXXXXXX-----en/events/eventId----eventId:',
-    eventId
-  );
+  //console.log(
+  //   '--------XXXXXXXXXXXXX-----en/events/eventId----eventId:',
+  //   eventId
+  // );
 
   let client;
 

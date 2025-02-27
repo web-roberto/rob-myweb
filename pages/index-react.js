@@ -39,7 +39,7 @@ function App(props) {
 
 // export async function getStaticProps() {
 //   const movieResults = await getAllMovies();
-//   //console.log('----pages/index.js---------getServerSideProps-----movieResults-----', movieResults );
+//   ////console.log('----pages/index.js---------getServerSideProps-----movieResults-----', movieResults );
 //   if (!movieResults) return { props: { movieResults: [] } };
 //   return {
 //     props: {
